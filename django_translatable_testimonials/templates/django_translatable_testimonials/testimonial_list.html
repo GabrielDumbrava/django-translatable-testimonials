@@ -1,0 +1,53 @@
+{% extends "cms_left_sidebar.html" %}
+{% load menu_tags cms_tags placeholder_tags %}
+{% load cms_helpers_tags %}
+
+{% block article %}
+    <!-- START ARTICLE CONTENT AREA -->
+    <article>
+        {% page_attribute "page_title" as title %}
+        <h1>{{ title }}</h1>
+        {% include 'social_buttons.html' %}<br/>
+
+{#        <div class="row show-grid clear-both">#}
+{#            <div class="span12">#}
+{##}
+{#            </div>#}
+{#        </div>#}
+
+        <div class="row show-grid features-block clear-both">
+        {% for object in object_list %}
+            <div class="span4">
+{#                <h2>What people are saying...</h2>#}
+                <blockquote class="blueb">
+                    <p>{{ object.quote }}</p>
+                    <small class="blueb-author"><strong>{{ object }}</strong>{% if object.org %} - {{ object.org }}{% endif %}</small>
+                </blockquote>
+            </div>
+            {% if forloop.counter|divisibleby:2 %}<div class="clear-both"><br>{% endif %}
+        {% endfor %}
+        </div>
+
+{#        {% for object in object_list %}#}
+{#            <div class="row show-grid team-member">#}
+{#                <div class="span3 photo">#}
+{#                    <div class="bordered-img">#}
+{#                        <a href="{% url 'tip_cursuri_details' slug=object.slug %}">#}
+{#                            <img alt="" src="{{ object.imagine.url }}">#}
+{#                        </a>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="span6">#}
+{#                    <a href="{% url 'tip_cursuri_details' slug=object.slug %}"> <h2>{{ object.titlu }}</h2></a>#}
+{#                    {% render_placeholder object.descriere|truncatewords_html:20 %}#}
+{#                    {% placeholder_truncate_words object.descriere words=40 %}#}
+{#                </div>#}
+{#                <div class="member-divider">#}
+{#                </div>#}
+{#            </div>#}
+{#        {% endfor %}#}
+
+
+    </article>
+    <!-- END ARTICLE CONTENT AREA -->
+{% endblock %}
