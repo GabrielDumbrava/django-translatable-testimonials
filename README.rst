@@ -1,4 +1,8 @@
 =============================
+NOT USABLE YET
+=============================
+
+=============================
 django-translatable-testimonials
 =============================
 
@@ -27,7 +31,7 @@ Install django-translatable-testimonials::
 
 Then use it in a project::
 
-    import django-translatable-testimonials
+    import django_translatable_testimonials
 
 Features
 --------
