@@ -12,7 +12,7 @@
             <div class="span8">
                 <blockquote class="blueb">
                     <p>{{ object.quote }}</p>
-                    <small class="blueb-author"><strong>{{ object }}</strong>{% if object.org %} - {{ object.org }}{% endif %}</small>
+                    <small class="blueb-author"><strong>{{ object }}</strong>, {{ object.title|default:"" }} {% if object.org %}- {{ object.org }}{% endif %}</small>
                 </blockquote>
                 <br><br>
             </div>
