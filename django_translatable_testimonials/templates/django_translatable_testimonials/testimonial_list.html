@@ -1,5 +1,5 @@
 {% extends "cms_left_sidebar.html" %}
-{% load menu_tags cms_tags placeholder_tags %}
+{% load menu_tags cms_tags %}
 {% load cms_helpers_tags %}
 
 {% block article %}
@@ -16,7 +16,7 @@
                 </blockquote>
                 <br><br>
             </div>
-{#            {% if forloop.counter|divisibleby:2 %}<div class="clear-both"><br>{% endif %}#}
+<!--{#            {% if forloop.counter|divisibleby:2 %}<div class="clear-both"><br>{% endif %}#}-->
         {% endfor %}
         </div>
     </article>

@@ -3,7 +3,7 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from filebrowser.fields import FileBrowseField
 from cms.models.fields import PlaceholderField
-from hvad.models import TranslatableModel, TranslatedFields
+from parler.models import TranslatableModel, TranslatedFields
 
 
 class string_with_title(str):

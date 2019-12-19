@@ -1,7 +1,7 @@
 from django.contrib import admin
 from unidecode import unidecode
 from django.utils.text import slugify
-from hvad.admin import TranslatableAdmin
+from parler.admin import TranslatableAdmin
 
 from .models import Testimonial
 
@@ -14,5 +14,6 @@ class TestimonialAdmin(TranslatableAdmin):
         # the default Django slugify algorithm fails with diacritics
         obj.slug = slugify(u'%s' % unidecode(obj.name))
         obj.save()
+
 
 admin.site.register(Testimonial, TestimonialAdmin)
