@@ -31,7 +31,7 @@ class Testimonial(TranslatableModel):
         quote=models.TextField()
     )
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
     class Meta:
