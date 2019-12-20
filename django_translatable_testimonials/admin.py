@@ -7,8 +7,8 @@ from .models import Testimonial
 
 
 class TestimonialAdmin(TranslatableAdmin):
-    list_display = ('__unicode__', 'active')
-    list_display_links = ('__unicode__', )
+    list_display = ('__str__', 'active')
+    list_display_links = ('__str__', )
 
     def save_model(self, request, obj, form, change):
         # the default Django slugify algorithm fails with diacritics
